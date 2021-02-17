@@ -1,0 +1,277 @@
+$--main-text-color: #eb5757;
+$--card-bg-color: #313131;
+$--header-color: #414141;
+$--bg-color: #525252;
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+header {
+    height: 113px;
+    background-color: $--header-color;
+    display: grid;
+    grid-template-columns: 500px 1fr 400px;
+}
+
+body {
+    background-color: $--bg-color;
+    color: white;
+}
+
+.contact {
+    grid-column: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-info {
+    width: 352px;
+    height: 165px;
+    background: $--header-color;
+    position: absolute;
+    top: 100px;
+    right: 90px;
+    opacity: 0;
+    transition: all 0.2s ease;
+    font-family: Courier Prime;
+    font-size: 24px;
+    color: #eb5757;
+    &.active {
+        top: 130px;
+        opacity: 1;
+    }
+    & .discord-server {
+        position: relative;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        &__logo {
+            width: 36px;
+            height: 36px;
+            margin-right: 15px;
+        }
+        a {
+            text-decoration: none;
+            color: $--main-text-color;
+            font-size: 32px;
+        }
+    }
+}
+.contacts {
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    padding: 25px;
+
+    .telegram {
+        text-align: center;
+    }
+    .discord {
+        text-align: center;
+    }
+    #discord-logo {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #telegram-logo {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-column: 1;
+
+    &-img {
+        width: 113px;
+        height: 113px;
+    }
+    &-contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Reggae One', cursive;
+        text-decoration: none;
+        color: white;
+        font-size: 32px;
+        cursor: pointer;
+        &::after {
+            content: '';
+            display: block;
+            background-image: url(../img/contact-downarrow.svg);
+            background-size: cover;
+            width: 33px;
+            height: 33px;
+            top: 5px;
+            position: relative;
+        }
+    }
+    h1 {
+        font-family: 'Reggae One', cursive;
+        font-size: 36px;
+        font-weight: normal;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & h2 {
+        font-size: 64px;
+        font-family: 'Courier Prime', monospace;
+    }
+}
+
+.account {
+    display: grid;
+    width: 85%;
+    min-height: 300px;
+    background-color: $--card-bg-color;
+    grid-template-columns: 350px 1fr 465px;
+    margin-bottom: 92px;
+    &-screenshot {
+        grid-column: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-info {
+        grid-column: 2;
+        border-right: 1px solid $--header-color;
+        border-left: 1px solid $--header-color;
+        padding: 40px 35px;
+        &__number {
+            color: $--main-text-color;
+            font-family: 'Courier Prime', monospace;
+            font-size: 24px;
+            font-weight: 400;
+            position: relative;
+            // top: 20px;
+        }
+        &__title {
+            font-family: Courier Prime;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            position: relative;
+            // top: 10px;
+            margin: 25px 0;
+        }
+        &__additional {
+            font-family: Courier Prime;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 18px;
+            position: relative;
+            // top: 10px;
+            & p {
+                margin: 0;
+            }
+        }
+        &__details {
+            position: relative;
+            top: 50px;
+            & a {
+                font-family: Courier Prime;
+                text-decoration: none;
+                font-size: 16px;
+                line-height: 18px;
+                color: $--main-text-color;
+            }
+        }
+    }
+    &-buysection {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        & ul {
+            padding: 0;
+            list-style: none;
+            font-family: Courier Prime;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            & .insurance {
+                margin: 10px 0;
+                display: flex;
+                align-items: center;
+                &::before {
+                    content: '';
+                    background-image: url(../img/insurance.svg);
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    background-size: cover;
+                    margin-right: 5px;
+                }
+            }
+            & .deliverytime {
+                margin: 10px 0;
+                display: flex;
+                align-items: center;
+                &::before {
+                    content: '';
+                    background-image: url(../img/deliverytime.svg);
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    background-size: cover;
+                    margin-right: 5px;
+                }
+            }
+            & .quantity {
+                margin: 10px 0;
+                display: flex;
+                align-items: center;
+                &::before {
+                    content: '';
+                    background-image: url(../img/quantity.svg);
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    background-size: cover;
+                    margin-right: 5px;
+                }
+            }
+        }
+        &__buy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & .buynow {
+                border-radius: 50px;
+                background-color: $--main-text-color;
+                width: 137px;
+                height: 35px;
+                border: 0;
+                cursor: pointer;
+                font-family: COUTURE;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 24px;
+                color: #ffffff;
+                &:focus {
+                    outline: none;
+                }
+            }
+            & span {
+                font-family: Courier Prime;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 42px;
+                line-height: 47px;
+            }
+        }
+    }
+}
+
+.redbox {
+    background-color: #c4c4c4;
+    width: 300px;
+    height: 200px;
+}

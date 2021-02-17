@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+header { height: 113px; background-color: #414141; display: grid; grid-template-columns: 500px 1fr 400px; }
+
+body { background-color: #525252; color: white; }
+
+.contact { grid-column: 3; display: flex; align-items: center; justify-content: center; }
+
+.contact-info { width: 352px; height: 165px; background: #414141; position: absolute; top: 100px; right: 90px; opacity: 0; transition: all 0.2s ease; font-family: Courier Prime; font-size: 24px; color: #eb5757; }
+
+.contact-info.active { top: 130px; opacity: 1; }
+
+.contact-info .discord-server { position: relative; bottom: 0; display: flex; flex-direction: row; justify-content: center; }
+
+.contact-info .discord-server__logo { width: 36px; height: 36px; margin-right: 15px; }
+
+.contact-info .discord-server a { text-decoration: none; color: #eb5757; font-size: 32px; }
+
+.contacts { display: grid; grid-template-columns: 25px 1fr; padding: 25px; }
+
+.contacts .telegram { text-align: center; }
+
+.contacts .discord { text-align: center; }
+
+.contacts #discord-logo { grid-column: 1; grid-row: 2; }
+
+.contacts #telegram-logo { grid-column: 1; grid-row: 1; }
+
+.logo { display: flex; flex-direction: row; align-items: center; grid-column: 1; }
+
+.logo-img { width: 113px; height: 113px; }
+
+.logo-contact { display: flex; align-items: center; justify-content: center; font-family: 'Reggae One', cursive; text-decoration: none; color: white; font-size: 32px; cursor: pointer; }
+
+.logo-contact::after { content: ''; display: block; background-image: url(../img/contact-downarrow.svg); background-size: cover; width: 33px; height: 33px; top: 5px; position: relative; }
+
+.logo h1 { font-family: 'Reggae One', cursive; font-size: 36px; font-weight: normal; }
+
+.container { display: flex; flex-direction: column; align-items: center; }
+
+.container h2 { font-size: 64px; font-family: 'Courier Prime', monospace; }
+
+.account { display: grid; width: 85%; min-height: 300px; background-color: #313131; grid-template-columns: 350px 1fr 465px; margin-bottom: 92px; }
+
+.account-screenshot { grid-column: 1; display: flex; align-items: center; justify-content: center; }
+
+.account-info { grid-column: 2; border-right: 1px solid #414141; border-left: 1px solid #414141; padding: 40px 35px; }
+
+.account-info__number { color: #eb5757; font-family: 'Courier Prime', monospace; font-size: 24px; font-weight: 400; position: relative; }
+
+.account-info__title { font-family: Courier Prime; font-style: normal; font-weight: normal; font-size: 24px; position: relative; margin: 25px 0; }
+
+.account-info__additional { font-family: Courier Prime; font-style: normal; font-weight: normal; font-size: 16px; line-height: 18px; position: relative; }
+
+.account-info__additional p { margin: 0; }
+
+.account-info__details { position: relative; top: 50px; }
+
+.account-info__details a { font-family: Courier Prime; text-decoration: none; font-size: 16px; line-height: 18px; color: #eb5757; }
+
+.account-buysection { display: flex; align-items: center; justify-content: space-between; padding: 20px; }
+
+.account-buysection ul { padding: 0; list-style: none; font-family: Courier Prime; font-style: normal; font-weight: normal; font-size: 16px; }
+
+.account-buysection ul .insurance { margin: 10px 0; display: flex; align-items: center; }
+
+.account-buysection ul .insurance::before { content: ''; background-image: url(../img/insurance.svg); width: 20px; height: 20px; display: block; background-size: cover; margin-right: 5px; }
+
+.account-buysection ul .deliverytime { margin: 10px 0; display: flex; align-items: center; }
+
+.account-buysection ul .deliverytime::before { content: ''; background-image: url(../img/deliverytime.svg); width: 20px; height: 20px; display: block; background-size: cover; margin-right: 5px; }
+
+.account-buysection ul .quantity { margin: 10px 0; display: flex; align-items: center; }
+
+.account-buysection ul .quantity::before { content: ''; background-image: url(../img/quantity.svg); width: 20px; height: 20px; display: block; background-size: cover; margin-right: 5px; }
+
+.account-buysection__buy { display: flex; flex-direction: column; align-items: center; }
+
+.account-buysection__buy .buynow { border-radius: 50px; background-color: #eb5757; width: 137px; height: 35px; border: 0; cursor: pointer; font-family: COUTURE; font-style: normal; font-weight: bold; font-size: 20px; line-height: 24px; color: #ffffff; }
+
+.account-buysection__buy .buynow:focus { outline: none; }
+
+.account-buysection__buy span { font-family: Courier Prime; font-style: normal; font-weight: normal; font-size: 42px; line-height: 47px; }
+
+.redbox { background-color: #c4c4c4; width: 300px; height: 200px; }
