@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
-header { height: 113px; background-color: #414141; display: grid; grid-template-columns: 500px 1fr 400px; }
+header { height: 113px; background-color: #414141; display: grid; grid-template-columns: 500px 1fr 400px; user-select: none; }
 
 body { background-color: #525252; color: white; }
 
@@ -83,3 +83,7 @@ body { background-color: #525252; color: white; }
 .account-buysection__buy span { font-family: Courier Prime; font-style: normal; font-weight: normal; font-size: 42px; line-height: 47px; }
 
 .redbox { background-color: #c4c4c4; width: 300px; height: 200px; }
+
+#details1, #details2, #details3, #details4 { border-radius: 20px; max-width: 90%; display: none; box-shadow: 13px 7px 16px -7px #eb5757; background-color: #313131; }
+
+.details-image { max-width: 600px; }

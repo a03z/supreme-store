@@ -9,6 +9,7 @@ header {
     background-color: $--header-color;
     display: grid;
     grid-template-columns: 500px 1fr 400px;
+    user-select: none;
 }
 
 body {
@@ -274,4 +275,17 @@ body {
     background-color: #c4c4c4;
     width: 300px;
     height: 200px;
+}
+#details1,
+#details2,
+#details3,
+#details4 {
+    border-radius: 20px;
+    max-width: 90%;
+    display: none;
+    box-shadow: 13px 7px 16px -7px rgba(235, 87, 87, 1);
+    background-color: $--card-bg-color;
+}
+.details-image {
+    max-width: 600px;
 }

@@ -6,6 +6,10 @@
             rel="stylesheet"
             href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+        />
         <link rel="icon" href="./img/logo.png" />
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -54,7 +58,7 @@
                 >
             </div>
         </div>
-        <div class="container">
+        <div class="container" id="container">
             <h2>Our Listings</h2>
             <div class="account">
                 <div class="account-screenshot">
@@ -71,7 +75,12 @@
                         <p>Rank: UnRanked</p>
                     </div>
                     <div class="account-info__details">
-                        <a href="">Details</a>
+                        <a
+                            data-fancybox
+                            data-src="#details1"
+                            href="javascript:;"
+                            >Details</a
+                        >
                     </div>
                 </div>
                 <div class="account-buysection">
@@ -101,7 +110,12 @@
                         <p>Rank: UnRanked</p>
                     </div>
                     <div class="account-info__details">
-                        <a href="">Details</a>
+                        <a
+                            data-fancybox
+                            data-src="#details1"
+                            href="javascript:;"
+                            >Details</a
+                        >
                     </div>
                 </div>
                 <div class="account-buysection">
@@ -131,7 +145,12 @@
                         <p>Rank: UnRanked</p>
                     </div>
                     <div class="account-info__details">
-                        <a href="">Details</a>
+                        <a
+                            data-fancybox
+                            data-src="#details1"
+                            href="javascript:;"
+                            >Details</a
+                        >
                     </div>
                 </div>
                 <div class="account-buysection">
@@ -161,7 +180,12 @@
                         <p>Rank: UnRanked</p>
                     </div>
                     <div class="account-info__details">
-                        <a href="">Details</a>
+                        <a
+                            data-fancybox
+                            data-src="#details1"
+                            href="javascript:;"
+                            >Details</a
+                        >
                     </div>
                 </div>
                 <div class="account-buysection">
@@ -178,5 +202,96 @@
             </div>
         </div>
     </body>
+    <div id="details1">
+        <a
+            href="https://i.imgur.com/NaR52Ou.png"
+            rel="noreferrer noopener"
+            target="_blank"
+        >
+            <img
+                src="https://i.imgur.com/NaR52Ou.png"
+                alt=""
+                class="details-image"
+        /></a>
+        <a
+            href="https://i.imgur.com/v2CZTnY.png"
+            rel="noreferrer noopener"
+            target="_blank"
+        >
+            <img
+                src="https://i.imgur.com/v2CZTnY.png"
+                alt=""
+                class="details-image"
+        /></a>
+    </div>
+    <div id="details2">
+        <a
+            href="https://i.imgur.com/NaR52Ou.png"
+            rel="noreferrer noopener"
+            target="_blank"
+        >
+            <img
+                src="https://i.imgur.com/NaR52Ou.png"
+                alt=""
+                class="details-image"
+        /></a>
+        <a
+            href="https://i.imgur.com/v2CZTnY.png"
+            rel="noreferrer noopener"
+            target="_blank"
+        >
+            <img
+                src="https://i.imgur.com/v2CZTnY.png"
+                alt=""
+                class="details-image"
+        /></a>
+    </div>
+    <div id="details3">
+        <a
+            href="https://i.imgur.com/NaR52Ou.png"
+            rel="noreferrer noopener"
+            target="_blank"
+        >
+            <img
+                src="https://i.imgur.com/NaR52Ou.png"
+                alt=""
+                class="details-image"
+        /></a>
+        <a
+            href="https://i.imgur.com/v2CZTnY.png"
+            rel="noreferrer noopener"
+            target="_blank"
+        >
+            <img
+                src="https://i.imgur.com/v2CZTnY.png"
+                alt=""
+                class="details-image"
+        /></a>
+    </div>
+    <div id="details4">
+        <a
+            href="https://i.imgur.com/NaR52Ou.png"
+            rel="noreferrer noopener"
+            target="_blank"
+        >
+            <img
+                src="https://i.imgur.com/NaR52Ou.png"
+                alt=""
+                class="details-image"
+        /></a>
+        <a
+            href="https://i.imgur.com/v2CZTnY.png"
+            rel="noreferrer noopener"
+            target="_blank"
+        >
+            <img
+                src="https://i.imgur.com/v2CZTnY.png"
+                alt=""
+                class="details-image"
+        /></a>
+    </div>
+
     <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 </html>
