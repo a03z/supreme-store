@@ -53,7 +53,7 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .container h2 { font-size: 64px; font-family: 'Courier Prime', monospace; }
 
-.title { display: flex; flex-direction: column; align-items: center; }
+.title { z-index: 3; display: flex; flex-direction: column; align-items: center; }
 
 .title .stars { filter: drop-shadow(0px 0px 6px #ffd43d); }
 
@@ -63,9 +63,9 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .reviews-title::after { margin-top: 25px; content: ''; position: relative; display: block; width: 62px; height: 2px; background: #ffffff; border-radius: 63px; }
 
-.reviews { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; margin-top: 55px; width: 95%; }
+.reviews { z-index: 3; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; margin-top: 55px; width: 95%; }
 
-.reviews .reviews-card { background: #292929; opacity: 0.6; border: 1px solid #ececec; margin-right: 49px; margin-left: 49px; margin-bottom: 35px; box-sizing: border-box; box-shadow: 0px 0px 8px rgba(64, 64, 64, 0.63); border-radius: 24px; width: 489px; height: 214px; display: flex; flex-direction: column; justify-content: space-between; padding: 17px; }
+.reviews .reviews-card { background: #2929296e; border: 1px solid #ececec; margin-right: 49px; margin-left: 49px; margin-bottom: 35px; box-sizing: border-box; box-shadow: 0px 0px 8px rgba(64, 64, 64, 0.63); border-radius: 24px; width: 489px; height: 214px; display: flex; flex-direction: column; justify-content: space-between; padding: 17px; }
 
 .reviews .reviews-card p { margin: 0; font-family: Open Sans; font-weight: 300; font-size: 18px; line-height: 25px; color: #636363; }
 

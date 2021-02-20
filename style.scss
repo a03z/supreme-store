@@ -170,6 +170,7 @@ body {
 }
 
 .title {
+    z-index: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -205,6 +206,7 @@ body {
 }
 
 .reviews {
+    z-index: 3;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -212,8 +214,7 @@ body {
     margin-top: 55px;
     width: 95%;
     & .reviews-card {
-        background: #292929;
-        opacity: 0.6;
+        background: #2929296e;
         border: 1px solid #ececec;
         margin-right: 49px;
         margin-left: 49px;
