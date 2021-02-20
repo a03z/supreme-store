@@ -24,19 +24,23 @@ footer {
 li {
     list-style: none;
 }
-
+html {
+    width: 100vw;
+}
 body {
     display: grid;
     grid-template-rows: 113px 1fr 100px;
-    // overflow-x: hidden;
+    overflow-x: hidden;
     min-height: 100vh;
     color: white;
     background-color: black;
 }
+
 .background-zatemnenie {
     opacity: 0.2;
     position: absolute;
     top: 113px;
+    overflow: hidden;
     z-index: 1;
     &__reviews {
         opacity: 0.5;
@@ -44,9 +48,18 @@ body {
         top: 113px;
         z-index: 1;
     }
+
     & img {
+        z-index: 1;
         max-width: 100%;
     }
+}
+.background-zatemnenie__faq {
+    opacity: 0.2;
+    position: absolute;
+    top: 113px;
+    z-index: 1;
+    height: 900px;
 }
 .menu {
     grid-column: 3;
@@ -169,12 +182,16 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
-    z-index: 2;
-    height: calc(100% - 100px);
+    z-index: 5;
 
     & h2 {
         font-size: 64px;
         font-family: 'Courier Prime', monospace;
+    }
+    &-faq {
+        align-items: flex-start;
+        padding: 0 111px;
+        z-index: 5;
     }
 }
 
@@ -185,6 +202,50 @@ body {
     align-items: center;
     & .stars {
         filter: drop-shadow(0px 0px 6px #ffd43d);
+    }
+    &-faq {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 49px;
+        color: #d5d5d5;
+        text-shadow: 0px 0px 7px #484848;
+        margin-top: 36px;
+    }
+}
+
+.faq {
+    display: flex;
+    justify-content: space-between;
+    font-family: Open Sans;
+    max-width: 85%;
+    margin-left: 15px;
+    & .questions {
+        border-left: 4px solid #5b5b5b;
+        padding-left: 18px;
+        height: 485px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    & .question {
+        color: white;
+        max-width: 555px;
+        &-title {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 25px;
+            margin: 0;
+        }
+        &-text {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 25px;
+            margin: 0;
+            padding: 15px 0;
+            color: #a9a9a9;
+        }
     }
 }
 
@@ -498,5 +559,38 @@ body {
         &-info {
             display: none;
         }
+    }
+}
+
+@media (max-width: 900px) {
+    header {
+        grid-template-columns: 1fr 0 1fr;
+    }
+    .logo {
+        h1 {
+            font-size: 24px;
+        }
+    }
+    .menu {
+        li {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 625px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .logo {
+        h1 {
+            display: none;
+        }
+    }
+    .reviews .reviews-card {
+        margin-right: auto;
+        margin-left: auto;
     }
 }

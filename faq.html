@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./css/style.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link
+            rel="stylesheet"
+            href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+        />
+        <link rel="icon" href="./img/logo-title.png" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Supreme Store</title>
+    </head>
+    <body>
+        <header>
+            <a href="index.html" class="logo">
+                <img src="./img/logo.png" alt="Logo" class="logo-img" />
+                <h1>Supremee Store</h1>
+            </a>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="https://discord.gg/DQ53VPZ" target="_blank"
+                            >Discord</a
+                        >
+                    </li>
+                    <li><a href="./reviews.html">Reviews</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="container-faq" id="container">
+                <h1 class="title-faq">Frequently Asked Questions</h1>
+                <section class="faq">
+                    <div class="questions">
+                        <div class="question">
+                            <h2 class="question-title">
+                                What payment methods do you accept?
+                            </h2>
+                            <p class="question-text">
+                                We accept only Stripe payments, if you want to
+                                pay with PayPal or BTC you can contact via
+                                Discord.
+                            </p>
+                        </div>
+                        <div class="question">
+                            <h2 class="question-title">
+                                I'd like to leave feedback. How can I do it?
+                            </h2>
+                            <p class="question-text">
+                                You can leave a review only after purchase
+                                account. It will be possible on the order page.
+                            </p>
+                        </div>
+                        <div class="question">
+                            <h2 class="question-title">
+                                I have some problems with my account, what can I
+                                do?
+                            </h2>
+                            <p class="question-text">
+                                If your account got hacked, community banned,
+                                VAC banned or something else you should contact
+                                us directly.
+                            </p>
+                        </div>
+                        <div class="question" style="margin-bottom: 0">
+                            <h2 class="question-title">
+                                Do you provide some insurance?
+                            </h2>
+                            <p class="question-text">
+                                Yes, each account comes with 7 days insurance.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="questions">
+                        <div class="question">
+                            <h2 class="question-title">
+                                Do you provide first email, phone number or PoP?
+                            </h2>
+                            <p class="question-text">
+                                We don’t provide personal email and phone
+                                numbers in safety reasons.
+                            </p>
+                        </div>
+                        <div class="question">
+                            <h2 class="question-title">
+                                Do you provide Faceit account?
+                            </h2>
+                            <p class="question-text">
+                                It depends on account, you can ask about it us
+                                directly in our discord.
+                            </p>
+                        </div>
+                        <div class="question">
+                            <h2 class="question-title">
+                                Do you sell hacked or personal accounts?
+                            </h2>
+                            <p class="question-text">
+                                We are selling only personal accounts leveled by
+                                our local team.
+                            </p>
+                        </div>
+                        <div class="question" style="margin-bottom: 0">
+                            <h2 class="question-title">
+                                Have you used cheats on any of your accounts?
+                            </h2>
+                            <p class="question-text">
+                                We have never used cheats on our accounts.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="background-zatemnenie__faq">
+                <img
+                    src="https://cdn.discordapp.com/attachments/488683212348981258/812383454582800445/a1b3e0b5ec470ed95e758cfa282207e7.jpg"
+                    alt="bg"
+                />
+            </div>
+        </main>
+
+        <footer></footer>
+    </body>
+
+    <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            disable: false,
+            startEvent: 'DOMContentLoaded',
+            initClassName: 'aos-init',
+            animatedClassName: 'aos-animate',
+            useClassNames: false,
+            disableMutationObserver: false,
+            debounceDelay: 50,
+            throttleDelay: 99,
+
+            offset: 120,
+            delay: 0,
+            duration: 800,
+            easing: 'ease',
+            once: false,
+            mirror: false,
+            anchorPlacement: 'top-bottom',
+        })
+    </script>
+</html>

@@ -7,13 +7,17 @@ footer { grid-row: 3; height: 100px; background-color: rgba(82, 82, 82, 0.01); p
 
 li { list-style: none; }
 
-body { display: grid; grid-template-rows: 113px 1fr 100px; min-height: 100vh; color: white; background-color: black; }
+html { width: 100vw; }
 
-.background-zatemnenie { opacity: 0.2; position: absolute; top: 113px; z-index: 1; }
+body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; min-height: 100vh; color: white; background-color: black; }
+
+.background-zatemnenie { opacity: 0.2; position: absolute; top: 113px; overflow: hidden; z-index: 1; }
 
 .background-zatemnenie__reviews { opacity: 0.5; position: absolute; top: 113px; z-index: 1; }
 
-.background-zatemnenie img { max-width: 100%; }
+.background-zatemnenie img { z-index: 1; max-width: 100%; }
+
+.background-zatemnenie__faq { opacity: 0.2; position: absolute; top: 113px; z-index: 1; height: 900px; }
 
 .menu { grid-column: 3; display: flex; align-items: center; justify-content: center; }
 
@@ -53,13 +57,27 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; min-height: 100vh; co
 
 .logo h1 { font-family: Open Sans; color: #181818; font-weight: bold; font-size: 36px; line-height: 49px; }
 
-.container { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 2; height: calc(100% - 100px); }
+.container { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 5; }
 
 .container h2 { font-size: 64px; font-family: 'Courier Prime', monospace; }
+
+.container-faq { align-items: flex-start; padding: 0 111px; z-index: 5; }
 
 .title { z-index: 3; display: flex; flex-direction: column; align-items: center; }
 
 .title .stars { filter: drop-shadow(0px 0px 6px #ffd43d); }
+
+.title-faq { font-family: Open Sans; font-style: normal; font-weight: bold; font-size: 36px; line-height: 49px; color: #d5d5d5; text-shadow: 0px 0px 7px #484848; margin-top: 36px; }
+
+.faq { display: flex; justify-content: space-between; font-family: Open Sans; max-width: 85%; margin-left: 15px; }
+
+.faq .questions { border-left: 4px solid #5b5b5b; padding-left: 18px; height: 485px; display: flex; flex-direction: column; justify-content: space-between; }
+
+.faq .question { color: white; max-width: 555px; }
+
+.faq .question-title { font-weight: bold; font-size: 18px; line-height: 25px; margin: 0; }
+
+.faq .question-text { font-weight: bold; font-size: 18px; line-height: 25px; margin: 0; padding: 15px 0; color: #a9a9a9; }
 
 .star { width: 27px; height: 27px; }
 
@@ -135,3 +153,11 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; min-height: 100vh; co
 
 @media (max-width: 1130px) { .account { display: grid; grid-template-rows: repeat(2, 1fr); grid-template-columns: 1fr; height: auto; width: 60%; }
   .account-info { display: none; } }
+
+@media (max-width: 900px) { header { grid-template-columns: 1fr 0 1fr; }
+  .logo h1 { font-size: 24px; }
+  .menu li { font-size: 18px; } }
+
+@media (max-width: 625px) { header { display: flex; flex-direction: row; align-items: center; }
+  .logo h1 { display: none; }
+  .reviews .reviews-card { margin-right: auto; margin-left: auto; } }
