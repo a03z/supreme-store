@@ -60,7 +60,7 @@ body {
     overflow: hidden;
     top: 113px;
     z-index: 1;
-    height: 900px;
+    height: 970px;
 }
 .menu {
     grid-column: 3;
@@ -190,7 +190,6 @@ body {
         font-family: 'Courier Prime', monospace;
     }
     &-faq {
-        align-items: flex-start;
         padding: 0 111px;
         z-index: 5;
         position: relative;
@@ -218,10 +217,10 @@ body {
 }
 
 .faq {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
     font-family: Open Sans;
-    max-width: 85%;
     margin-left: 15px;
     & .questions {
         border-left: 4px solid #5b5b5b;
@@ -236,7 +235,7 @@ body {
         max-width: 555px;
         &-title {
             font-weight: bold;
-            font-size: 18px;
+            font-size: 20px;
             line-height: 25px;
             margin: 0;
         }
@@ -247,6 +246,60 @@ body {
             margin: 0;
             padding: 15px 0;
             color: #a9a9a9;
+        }
+    }
+}
+.contact {
+    background: rgba(112, 112, 112, 0.4);
+    opacity: 0.85;
+    backdrop-filter: blur(22px);
+    width: 416px;
+    padding: 20px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 6px;
+    margin-top: 90px;
+    color: rgba(212, 212, 212, 0.8);
+    a {
+        text-decoration: underline;
+        color: rgba(212, 212, 212, 0.8);
+    }
+}
+.staff {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center;
+    .avatar {
+        background: #c4c4c4;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        grid-row: 1;
+    }
+    .admin {
+        border: 2px solid #ffd66d;
+        box-shadow: 0px 0px 6px #ffd66d;
+    }
+    .ceo {
+        border: 2px solid #98ffa8;
+        box-shadow: 0px 0px 6px #98ffa8;
+    }
+    &-member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        & span {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 12px;
+
+            color: #555555;
         }
     }
 }
@@ -554,7 +607,8 @@ body {
 @media (max-width: 1130px) {
     .account {
         display: grid;
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 3fr 1fr;
         grid-template-columns: 1fr;
         height: auto;
         width: 60%;
