@@ -528,6 +528,7 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 0 0 40px 0;
         button {
             cursor: pointer;
             background: #eb5757;
@@ -605,17 +606,30 @@ body {
     }
 }
 
+@media (max-width: 1250px) {
+    .faq {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 200px 200px;
+        gap: 20px;
+    }
+}
+
 @media (max-width: 1130px) {
     .account {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 3fr 1fr;
+        grid-template-rows: 2fr 1fr;
         grid-template-columns: 1fr;
         height: auto;
-        width: 60%;
+        width: 35%;
         &-info {
             display: none;
         }
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
 }
 
@@ -635,6 +649,12 @@ body {
     }
 }
 
+@media (max-width: 700px) {
+    .account {
+        width: 55%;
+    }
+}
+
 @media (max-width: 625px) {
     header {
         display: flex;
@@ -649,5 +669,8 @@ body {
     .reviews .reviews-card {
         margin-right: auto;
         margin-left: auto;
+    }
+    .container-faq {
+        padding: 0 25px;
     }
 }
