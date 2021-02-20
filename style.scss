@@ -28,7 +28,7 @@ li {
 body {
     display: grid;
     grid-template-rows: 113px 1fr 100px;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     min-height: 100vh;
     color: white;
     background-color: black;
@@ -38,6 +38,15 @@ body {
     position: absolute;
     top: 113px;
     z-index: 1;
+    &__reviews {
+        opacity: 0.5;
+        position: absolute;
+        top: 113px;
+        z-index: 1;
+    }
+    & img {
+        max-width: 100%;
+    }
 }
 .menu {
     grid-column: 3;
@@ -286,9 +295,11 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 15px;
     }
     &-info {
-        margin: 63px 0;
+        padding: 25px;
+        margin: auto;
         & h1 {
             font-family: Open Sans;
             font-style: normal;
@@ -405,7 +416,7 @@ body {
             background: #eb5757;
             box-shadow: 0px 0px 11px 1px #eb5757;
             border-radius: 5px;
-            width: 213px;
+            width: 60%;
             height: 56px;
 
             font-family: Open Sans;
@@ -428,7 +439,7 @@ body {
             background: #eb5757;
             box-shadow: 0px 0px 11px 1px #eb5757;
             border-radius: 5px;
-            width: 213px;
+            width: 60%;
             height: 56px;
             text-decoration: none;
             font-family: Open Sans;
@@ -460,4 +471,19 @@ body {
 }
 .details-image {
     max-width: 600px;
+}
+
+@media (max-width: 1425px) {
+    .account {
+        grid-template-columns: 1fr 450px 1fr;
+        width: 75%;
+        &-buy {
+            & button {
+                font-size: 18px;
+            }
+            & a {
+                font-size: 18px;
+            }
+        }
+    }
 }
