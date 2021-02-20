@@ -57,6 +57,7 @@ body {
 .background-zatemnenie__faq {
     opacity: 0.2;
     position: absolute;
+    overflow: hidden;
     top: 113px;
     z-index: 1;
     height: 900px;
@@ -192,6 +193,7 @@ body {
         align-items: flex-start;
         padding: 0 111px;
         z-index: 5;
+        position: relative;
     }
 }
 
