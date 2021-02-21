@@ -17,7 +17,7 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .background-zatemnenie img { z-index: 1; max-width: 100%; }
 
-.background-zatemnenie__faq { opacity: 0.2; position: absolute; overflow: hidden; top: 113px; z-index: 1; height: 970px; }
+.background-zatemnenie__faq { opacity: 0.2; position: absolute; overflow: hidden; top: 113px; z-index: 1; height: 980px; }
 
 .menu { grid-column: 3; display: flex; align-items: center; justify-content: center; }
 
@@ -151,15 +151,55 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .account-info__advantages #delivery::before { margin-right: 8px; content: ''; background: url(../img/deliverytime.svg); display: block; width: 16px; height: 16px; }
 
-.account-buy { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 0 40px 0; }
+.account-buy { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 0 40px 0; font-family: Open Sans; font-size: 24px; }
 
-.account-buy button { cursor: pointer; background: #eb5757; box-shadow: 0px 0px 11px 1px #eb5757; border-radius: 5px; width: 60%; height: 56px; font-family: Open Sans; font-style: normal; font-weight: normal; font-size: 24px; line-height: 117.68%; text-align: center; color: #ffffff; outline: none; border: 0; margin-bottom: 35px; }
+.account-buy a { display: flex; flex-direction: column; align-items: center; justify-content: center; background: #eb5757; box-shadow: 0px 0px 11px 1px #eb5757; border-radius: 5px; width: 60%; height: 56px; text-decoration: none; line-height: 117.68%; text-align: center; color: #ffffff; }
 
-.account-buy a { display: flex; flex-direction: column; align-items: center; justify-content: center; background: #eb5757; box-shadow: 0px 0px 11px 1px #eb5757; border-radius: 5px; width: 60%; height: 56px; text-decoration: none; font-family: Open Sans; font-style: normal; font-weight: normal; font-size: 24px; line-height: 117.68%; text-align: center; color: #ffffff; }
+.order-account { display: grid; grid-template-columns: 1fr 400px; grid-template-rows: 280px; background: rgba(82, 82, 82, 0.15); backdrop-filter: blur(22px); max-width: 70%; height: 280px; margin: auto; margin-bottom: 20px; }
+
+.order-account__image { grid-column: 2; display: flex; align-items: center; justify-content: center; padding: 15px; }
+
+.order-account__info { grid-column: 1; grid-row: 1; padding: 25px; margin: auto; }
+
+.order-account__info h1 { font-family: Open Sans; font-style: normal; font-weight: normal; font-size: 18px; line-height: 25px; color: #9b9b9b; }
+
+.order-account__info__advantages { display: grid; grid-template-columns: repeat(3, 144px); grid-template-rows: repeat(2, 36px); font-family: Open Sans; font-style: normal; font-weight: normal; font-size: 14px; line-height: 19px; color: white; }
+
+.order-account__info__advantages #lvl { grid-column: 1; grid-row: 1; display: flex; }
+
+.order-account__info__advantages #lvl::before { margin-right: 7px; content: ''; background: url(../img/star.svg); display: block; width: 17px; height: 17px; }
+
+.order-account__info__advantages #games { grid-column: 2; grid-row: 1; display: flex; }
+
+.order-account__info__advantages #games::before { margin-right: 5px; content: ''; background: url(../img/games.svg); display: block; width: 18px; height: 16px; }
+
+.order-account__info__advantages #wins { grid-column: 3; grid-row: 1; display: flex; }
+
+.order-account__info__advantages #wins::before { margin-right: 9px; content: ''; background: url(../img/wins.svg); display: block; width: 16px; height: 15px; }
+
+.order-account__info__advantages #prime { grid-column: 1; grid-row: 2; display: flex; }
+
+.order-account__info__advantages #prime::before { margin-right: 7px; content: ''; background: url(../img/prime.svg); display: block; width: 16px; height: 16px; }
+
+.order-account__info__advantages #insurance { grid-column: 2; grid-row: 2; display: flex; }
+
+.order-account__info__advantages #insurance::before { margin-right: 7px; content: ''; background: url(../img/insurance.svg); display: block; width: 16px; height: 16px; }
+
+.order-account__info__advantages #delivery { grid-column: 3; grid-row: 2; display: flex; }
+
+.order-account__info__advantages #delivery::before { margin-right: 8px; content: ''; background: url(../img/deliverytime.svg); display: block; width: 16px; height: 16px; }
+
+.order-account__buy { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 0 40px 0; font-family: Open Sans; font-size: 24px; }
+
+.order-account__buy button { cursor: pointer; background: #eb5757; box-shadow: 0px 0px 11px 1px #eb5757; border-radius: 5px; width: 60%; height: 56px; line-height: 117.68%; text-align: center; color: #ffffff; outline: none; border: 0; margin-bottom: 35px; }
+
+.order-account__buy a { display: flex; flex-direction: column; align-items: center; justify-content: center; background: #eb5757; box-shadow: 0px 0px 11px 1px #eb5757; border-radius: 5px; width: 60%; height: 56px; text-decoration: none; line-height: 117.68%; text-align: center; color: #ffffff; }
 
 .redbox { background-color: #c4c4c4; width: 300px; height: 200px; }
 
-#details1, #details2, #details3, #details4 { border-radius: 20px; max-width: 90%; display: none; box-shadow: 13px 7px 16px -7px #eb5757; background-color: #313131; }
+.order-container { display: flex; flex-direction: column; }
+
+#order { max-width: 80%; height: 550px; background: #1d1d1d; border-radius: 15px; display: none; }
 
 .details-image { max-width: 600px; }
 

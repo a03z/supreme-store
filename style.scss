@@ -60,7 +60,7 @@ body {
     overflow: hidden;
     top: 113px;
     z-index: 1;
-    height: 970px;
+    height: 980px;
 }
 .menu {
     grid-column: 3;
@@ -529,6 +529,162 @@ body {
         align-items: center;
         justify-content: center;
         padding: 0 0 40px 0;
+        font-family: Open Sans;
+        font-size: 24px;
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #eb5757;
+            box-shadow: 0px 0px 11px 1px #eb5757;
+            border-radius: 5px;
+            width: 60%;
+            height: 56px;
+            text-decoration: none;
+            line-height: 117.68%;
+            text-align: center;
+            color: #ffffff;
+        }
+    }
+}
+
+.order-account {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-template-rows: 280px;
+    background: rgba(82, 82, 82, 0.15);
+    backdrop-filter: blur(22px);
+    max-width: 70%;
+    height: 280px;
+    margin: auto;
+    margin-bottom: 20px;
+    &__image {
+        grid-column: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+    }
+    &__info {
+        grid-column: 1;
+        grid-row: 1;
+        padding: 25px;
+        margin: auto;
+        & h1 {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+
+            color: #9b9b9b;
+        }
+        &__advantages {
+            display: grid;
+            grid-template-columns: repeat(3, 144px);
+            grid-template-rows: repeat(2, 36px);
+
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            color: white;
+            #lvl {
+                grid-column: 1;
+                grid-row: 1;
+                display: flex;
+
+                &::before {
+                    margin-right: 7px;
+                    content: '';
+                    background: url(../img/star.svg);
+                    display: block;
+                    width: 17px;
+                    height: 17px;
+                }
+            }
+            #games {
+                grid-column: 2;
+                grid-row: 1;
+                display: flex;
+
+                &::before {
+                    margin-right: 5px;
+                    content: '';
+                    background: url(../img/games.svg);
+                    display: block;
+                    width: 18px;
+                    height: 16px;
+                }
+            }
+            #wins {
+                grid-column: 3;
+                grid-row: 1;
+                display: flex;
+
+                &::before {
+                    margin-right: 9px;
+                    content: '';
+                    background: url(../img/wins.svg);
+                    display: block;
+                    width: 16px;
+                    height: 15px;
+                }
+            }
+            #prime {
+                grid-column: 1;
+                grid-row: 2;
+                display: flex;
+
+                &::before {
+                    margin-right: 7px;
+                    content: '';
+                    background: url(../img/prime.svg);
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+            #insurance {
+                grid-column: 2;
+                grid-row: 2;
+                display: flex;
+
+                &::before {
+                    margin-right: 7px;
+                    content: '';
+                    background: url(../img/insurance.svg);
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+            #delivery {
+                grid-column: 3;
+                grid-row: 2;
+                display: flex;
+
+                &::before {
+                    margin-right: 8px;
+                    content: '';
+                    background: url(../img/deliverytime.svg);
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+    &__buy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 40px 0;
+        font-family: Open Sans;
+        font-size: 24px;
         button {
             cursor: pointer;
             background: #eb5757;
@@ -537,10 +693,6 @@ body {
             width: 60%;
             height: 56px;
 
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
             line-height: 117.68%;
             text-align: center;
             color: #ffffff;
@@ -560,10 +712,6 @@ body {
             width: 60%;
             height: 56px;
             text-decoration: none;
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
             line-height: 117.68%;
             text-align: center;
             color: #ffffff;
@@ -577,15 +725,16 @@ body {
     height: 200px;
 }
 
-#details1,
-#details2,
-#details3,
-#details4 {
-    border-radius: 20px;
-    max-width: 90%;
+.order-container {
+    display: flex;
+    flex-direction: column;
+}
+#order {
+    max-width: 80%;
+    height: 550px;
+    background: #1d1d1d;
+    border-radius: 15px;
     display: none;
-    box-shadow: 13px 7px 16px -7px rgba(235, 87, 87, 1);
-    background-color: $--card-bg-color;
 }
 .details-image {
     max-width: 600px;
