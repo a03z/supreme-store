@@ -3,13 +3,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
 header { height: 113px; background-color: #ffffff; display: grid; grid-template-columns: 500px 1fr 400px; user-select: none; color: black; grid-row: 1; }
 
-footer { grid-row: 3; height: 100px; background-color: rgba(82, 82, 82, 0.01); position: relative; }
+footer { grid-row: 3; height: 269px; background-color: #1c1f22; position: relative; display: flex; justify-content: center; align-items: center; gap: 150px; }
+
+footer h2 { margin: 0; font-family: Open Sans; font-weight: 800; font-size: 48px; line-height: 65px; color: #ffffff; }
+
+footer span { margin-top: 8px; }
+
+footer p { text-shadow: 0px 0px 4px #ffffff; position: absolute; left: 15px; top: 230px; }
+
+.footer-element { display: grid; place-items: center; grid-template-rows: 65px 25px; }
 
 li { list-style: none; }
 
 html { width: 100vw; }
 
-body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; min-height: 100vh; color: white; background-color: black; }
+body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; min-height: 100vh; color: white; background-color: black; font-family: Open Sans; font-style: normal; font-weight: bold; font-size: 14px; line-height: 19px; color: #ffffff; }
 
 .background-zatemnenie { opacity: 0.2; position: absolute; top: 113px; overflow: hidden; z-index: 1; }
 
@@ -125,7 +133,7 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .account-info h1 { font-family: Open Sans; font-style: normal; font-weight: normal; font-size: 18px; line-height: 25px; color: #9b9b9b; }
 
-.account-info__advantages { display: grid; grid-template-columns: repeat(3, 144px); grid-template-rows: repeat(2, 36px); font-family: Open Sans; font-style: normal; font-weight: normal; font-size: 14px; line-height: 19px; color: white; }
+.account-info__advantages { display: grid; grid-template-columns: repeat(3, 144px); grid-template-rows: repeat(2, 36px); font-family: Open Sans; font-style: normal; font-weight: normal; font-size: 14px; line-height: 19px; color: white; margin-top: 55px; }
 
 .account-info__advantages #lvl { grid-column: 1; grid-row: 1; display: flex; }
 
@@ -155,11 +163,17 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .account-buy a { display: flex; flex-direction: column; align-items: center; justify-content: center; background: #eb5757; box-shadow: 0px 0px 11px 1px #eb5757; border-radius: 5px; width: 60%; height: 56px; text-decoration: none; line-height: 117.68%; text-align: center; color: #ffffff; }
 
-.order-account { display: grid; grid-template-columns: 1fr 400px; grid-template-rows: 280px; background: rgba(82, 82, 82, 0.15); backdrop-filter: blur(22px); max-width: 70%; height: 280px; margin: auto; margin-bottom: 20px; }
+.order-logo { position: fixed; left: 0px; top: 0px; z-index: 1; }
 
-.order-account__image { grid-column: 2; display: flex; align-items: center; justify-content: center; padding: 15px; }
+.order-logo img { width: 113px; height: 113px; filter: drop-shadow(0px 0px 7px #0075ff); }
 
-.order-account__info { grid-column: 1; grid-row: 1; padding: 25px; margin: auto; }
+.order-logo h1 { font-family: Open Sans; font-weight: bold; font-size: 36px; line-height: 49px; color: #ffffff; position: absolute; left: 113px; width: 300px; top: 8px; text-shadow: 0px 0px 4px #ffffff; }
+
+.order-account { display: grid; grid-template-columns: 1fr 400px; grid-template-rows: 280px; backdrop-filter: blur(22px); height: 280px; margin: auto; margin-bottom: 20px; }
+
+.order-account__image { grid-column: 3; display: flex; align-items: center; justify-content: center; padding: 15px; }
+
+.order-account__info { grid-column: 1 /3; grid-row: 1; padding: 25px; }
 
 .order-account__info h1 { font-family: Open Sans; font-style: normal; font-weight: normal; font-size: 18px; line-height: 25px; color: #9b9b9b; }
 
@@ -195,11 +209,53 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .order-account__buy a { display: flex; flex-direction: column; align-items: center; justify-content: center; background: #eb5757; box-shadow: 0px 0px 11px 1px #eb5757; border-radius: 5px; width: 60%; height: 56px; text-decoration: none; line-height: 117.68%; text-align: center; color: #ffffff; }
 
-.redbox { background-color: #c4c4c4; width: 300px; height: 200px; }
+.order-pay { grid-row: 2; height: 147px; }
 
-.order-container { display: flex; flex-direction: column; }
+.order-pay__systems { grid-column: 1; padding: 17px 0; display: grid; gap: 8px; grid-template-rows: repeat(3, 34px); width: 245px; height: 147px; background: #343639; }
 
-#order { max-width: 80%; height: 550px; background: #1d1d1d; border-radius: 15px; display: none; }
+.order-pay__total { grid-column: 2; display: flex; flex-direction: column; align-items: center; width: 245px; height: 147px; background: #343639; }
+
+.order-pay__total .cost { padding-left: 15px; padding-right: 15px; margin-top: 23px; width: 100%; display: flex; justify-content: space-between; }
+
+.order-pay__total .fee { padding-left: 15px; padding-right: 15px; margin: 0; width: 100%; display: flex; justify-content: space-between; }
+
+.order-pay__total .fee span { color: #eb5757; }
+
+.order-pay__total .total { background: #565656; font-weight: bold; font-size: 18px; line-height: 25px; color: #ffffff; width: 100%; display: flex; justify-content: space-between; height: 34px; margin-bottom: 17px; padding: 5px 13px; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+
+.order-pay__email { grid-column: 3; width: 245px; height: 147px; background: #343639; padding: 22px; }
+
+.order-pay__email input { background: #565656; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 4px; outline: none; border: 0; width: 201px; height: 27px; color: white; }
+
+.order-pay__email input::placeholder { color: #dbdbdb; padding: 5px; }
+
+.order-pay__email span { color: #ff0000; font-size: 9px; line-height: 12px; text-shadow: 0px 0px 4px #ff0000; }
+
+.order-pay__email a { display: flex; flex-direction: column; align-items: center; justify-content: center; background: #eb5757; box-shadow: 0px 0px 7px #eb5757; border-radius: 4px; height: 27px; text-decoration: none; line-height: 117.68%; text-align: center; color: #ffffff; width: 75px; position: relative; top: 30px; left: 120px; }
+
+.order-active { background: #ce7a2d; }
+
+.order-active::after { content: ''; display: block; background-image: url(../img/after-arrow.svg); width: 14px; height: 34px; position: relative; left: 230px; top: -34px; }
+
+.order .redbox { background-color: #c4c4c4; width: 300px; height: 200px; }
+
+.order-container { place-items: center; display: grid; grid-template-columns: repeat(3, 300px); grid-template-rows: repeat(2, 1fr); z-index: 2; position: relative; }
+
+.method-card { cursor: pointer; display: grid; grid-row: 1; align-items: center; grid-template-columns: 34px 100px; grid-template-rows: 34px; padding-left: 15px; }
+
+.method-btc { cursor: pointer; display: grid; align-items: center; grid-template-columns: 34px 100px; grid-template-rows: 34px; grid-row: 2; padding-left: 15px; }
+
+.method-btc img { width: 28px; height: 28px; opacity: 0.8; }
+
+.method-gmoney { cursor: pointer; display: grid; align-items: center; grid-template-columns: 34px 100px; grid-template-rows: 34px; grid-row: 3; padding-left: 15px; }
+
+.method-text { font-family: Open Sans; font-weight: bold; font-size: 12px; line-height: 16px; color: #ffffff; }
+
+.method-image { height: auto; width: 34px; }
+
+#order { position: relative; overflow-y: hidden; max-width: 70%; height: 550px; background: #1d1d1d; border-radius: 15px; display: none; }
+
+#order button { background: none; }
 
 .details-image { max-width: 600px; }
 

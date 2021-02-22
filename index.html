@@ -9,7 +9,7 @@
         />
         <link
             rel="stylesheet"
-            href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+            href="./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css"
         />
         <link rel="icon" href="./img/logo-title.png" />
         <meta charset="UTF-8" />
@@ -67,6 +67,7 @@
                             data-fancybox
                             data-src="#order"
                             href="javascript:;"
+                            data-modal="true"
                             >Buy for $100</a
                         >
                         <a
@@ -101,6 +102,7 @@
                             data-fancybox
                             data-src="#order"
                             href="javascript:;"
+                            data-modal="true"
                             >Buy for $100</a
                         >
                         <a
@@ -135,6 +137,7 @@
                             data-fancybox
                             data-src="#order"
                             href="javascript:;"
+                            data-modal="true"
                             >Buy for $100</a
                         >
                         <a
@@ -169,6 +172,7 @@
                             data-fancybox
                             data-src="#order"
                             href="javascript:;"
+                            data-modal="true"
                             >Buy for $100</a
                         >
                         <a
@@ -203,6 +207,7 @@
                             data-fancybox
                             data-src="#order"
                             href="javascript:;"
+                            data-modal="true"
                             >Buy for $100</a
                         >
                         <a
@@ -237,6 +242,7 @@
                             data-fancybox
                             data-src="#order"
                             href="javascript:;"
+                            data-modal="true"
                             >Buy for $100</a
                         >
                         <a
@@ -255,35 +261,109 @@
             </div>
         </main>
 
-        <footer></footer>
+        <footer
+            data-aos="zoom-in"
+            data-aos-duration="400"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true"
+        >
+            <div class="footer-element">
+                <h2>99%</h2>
+                <span>Positive feedbacks</span>
+            </div>
+            <div class="footer-element">
+                <h2>220</h2>
+                <span>Sold accounts</span>
+            </div>
+            <div class="footer-element">
+                <img src="./img/safety-payments.svg" />
+                <span>Safety payments</span>
+            </div>
+            <div class="footer-element">
+                <h2>12300$</h2>
+                <span>The total cost of all sold accounts</span>
+            </div>
+            <p>© 2020-2021 Supreme Store.</p>
+        </footer>
     </body>
     <div id="order">
+        <div class="order-logo">
+            <img src="./img/logo.png" alt="logotype" />
+            <h1>Supremee Store</h1>
+        </div>
         <div class="order-container">
-            <div data-aos="fade-up" class="order-account">
-                <div class="order-account__image">
-                    <img src="./img/preview.jpg" alt="preview Images" />
-                </div>
-                <div class="order-account__info">
-                    <h1>
-                        ⭐ Old Operations ⭐ Bravo, Breakout Silver, 2018
-                        Service Medal, 10 and 5 Year Coins + LB ⭐ 256 wins ⭐
-                        Old Steam Badges ⭐
-                    </h1>
-                    <div class="account-info__advantages">
-                        <li id="lvl">Steam lvl: 50</li>
-                        <li id="games">Games: 69</li>
-                        <li id="wins">Wins: 256</li>
-                        <li id="prime">Prime Status</li>
-                        <li id="insurance">Free Insurance</li>
-                        <li id="delivery">Instant Delivery</li>
-                    </div>
+            <div class="order-account__image">
+                <img src="./img/preview.jpg" alt="preview Images" />
+            </div>
+            <div class="order-account__info">
+                <h1>
+                    ⭐ Old Operations ⭐ Bravo, Breakout Silver, 2018 Service
+                    Medal, 10 and 5 Year Coins + LB ⭐ 256 wins ⭐ Old Steam
+                    Badges ⭐
+                </h1>
+                <div class="account-info__advantages">
+                    <li id="lvl">Steam lvl: 50</li>
+                    <li id="games">Games: 69</li>
+                    <li id="wins">Wins: 256</li>
+                    <li id="prime">Prime Status</li>
+                    <li id="insurance">Free Insurance</li>
+                    <li id="delivery">Instant Delivery</li>
                 </div>
             </div>
+
+            <div class="order-pay__systems">
+                <div class="method-card" id="method-card">
+                    <img src="./img/card.png" alt="card" class="method-image" />
+                    <span class="method-text">Bank Card</span>
+                </div>
+                <div class="method-btc" id="method-btc">
+                    <img
+                        src="https://cdn.discordapp.com/attachments/488683212348981258/813375470200553492/unnamed.png"
+                        alt="card"
+                        class="method-image"
+                    />
+                    <span class="method-text">Bitcoin</span>
+                </div>
+                <div class="method-gmoney" id="method-gmoney">
+                    <img
+                        src="./img/gamemoney.png"
+                        alt="card"
+                        class="method-image"
+                    />
+                    <span class="method-text">GameMoney</span>
+                </div>
+            </div>
+            <div class="order-pay__total">
+                <p class="cost">Account cost: <span>100,00$</span></p>
+                <p class="fee">Fee amount: <span>3,08$</span></p>
+                <p class="total">Total amount: <span>103,08$</span></p>
+            </div>
+            <div class="order-pay__email">
+                <input type="text" placeholder="email@email.com" />
+                <span>We will send details of account to this email</span>
+                <a href="">Pay</a>
+            </div>
         </div>
+        <button
+            type="button"
+            data-fancybox-close=""
+            class="fancybox-button fancybox-close-small"
+            title="Close"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"
+                ></path>
+            </svg>
+        </button>
     </div>
     <script src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -306,249 +386,3 @@
         })
     </script>
 </html>
-<!-- 
-<div data-aos="fade-up" class="account">
-    <div class="account-screenshot">
-        <div class="redbox"></div>
-    </div>
-    <div class="account-info">
-        <span class="account-info__number">#1</span>
-        <h1 class="account-info__title">
-            Lorem ipsum dolor sit amet consectetur, adipisicing
-            elit. Facilis, exercitationem.
-        </h1>
-        <div class="account-info__additional">
-            <p>Prime Status : Yes</p>
-            <p>Rank: UnRanked</p>
-        </div>
-        <div class="account-info__details">
-            <a
-                data-fancybox
-                data-src="#details1"
-                href="javascript:;"
-                >Details</a
-            >
-        </div>
-    </div>
-    <div class="account-buysection">
-        <ul>
-            <li class="deliverytime">2 hours</li>
-            <li class="quantity">1</li>
-            <li class="insurance">Free insurance</li>
-        </ul>
-        <div class="account-buysection__buy">
-            <span>$200</span>
-            <button class="buynow">BUY NOW</button>
-        </div>
-    </div>
-</div>
-<div data-aos="fade-up" class="account">
-    <div class="account-screenshot">
-        <div class="redbox"></div>
-    </div>
-    <div class="account-info">
-        <span class="account-info__number">#2</span>
-        <h1 class="account-info__title">
-            Lorem ipsum dolor sit amet consectetur, adipisicing
-            elit. Facilis, exercitationem.
-        </h1>
-        <div class="account-info__additional">
-            <p>Prime Status : Yes</p>
-            <p>Rank: UnRanked</p>
-        </div>
-        <div class="account-info__details">
-            <a
-                data-fancybox
-                data-src="#details1"
-                href="javascript:;"
-                >Details</a
-            >
-        </div>
-    </div>
-    <div class="account-buysection">
-        <ul>
-            <li class="deliverytime">2 hours</li>
-            <li class="quantity">1</li>
-            <li class="insurance">Free insurance</li>
-        </ul>
-        <div class="account-buysection__buy">
-            <span>$200</span>
-            <button class="buynow">BUY NOW</button>
-        </div>
-    </div>
-</div>
-<div data-aos="fade-up" class="account">
-    <div class="account-screenshot">
-        <div class="redbox"></div>
-    </div>
-    <div class="account-info">
-        <span class="account-info__number">#3</span>
-        <h1 class="account-info__title">
-            Lorem ipsum dolor sit amet consectetur, adipisicing
-            elit. Facilis, exercitationem.
-        </h1>
-        <div class="account-info__additional">
-            <p>Prime Status : Yes</p>
-            <p>Rank: UnRanked</p>
-        </div>
-        <div class="account-info__details">
-            <a
-                data-fancybox
-                data-src="#details1"
-                href="javascript:;"
-                >Details</a
-            >
-        </div>
-    </div>
-    <div class="account-buysection">
-        <ul>
-            <li class="deliverytime">2 hours</li>
-            <li class="quantity">1</li>
-            <li class="insurance">Free insurance</li>
-        </ul>
-        <div class="account-buysection__buy">
-            <span>$200</span>
-            <button class="buynow">BUY NOW</button>
-        </div>
-    </div>
-</div>
-<div data-aos="fade-up" class="account">
-    <div class="account-screenshot">
-        <div class="redbox"></div>
-    </div>
-    <div class="account-info">
-        <span class="account-info__number">#4</span>
-        <h1 class="account-info__title">
-            Lorem ipsum dolor sit amet consectetur, adipisicing
-            elit. Facilis, exercitationem.
-        </h1>
-        <div class="account-info__additional">
-            <p>Prime Status : Yes</p>
-            <p>Rank: UnRanked</p>
-        </div>
-        <div class="account-info__details">
-            <a
-                data-fancybox
-                data-src="#details1"
-                href="javascript:;"
-                >Details</a
-            >
-        </div>
-    </div>
-    <div class="account-buysection">
-        <ul>
-            <li class="deliverytime">2 hours</li>
-            <li class="quantity">1</li>
-            <li class="insurance">Free insurance</li>
-        </ul>
-        <div class="account-buysection__buy">
-            <span>$200</span>
-            <button class="buynow">BUY NOW</button>
-        </div>
-    </div>
-</div>
-<div data-aos="fade-up" class="account">
-    <div class="account-screenshot">
-        <div class="redbox"></div>
-    </div>
-    <div class="account-info">
-        <span class="account-info__number">#4</span>
-        <h1 class="account-info__title">
-            Lorem ipsum dolor sit amet consectetur, adipisicing
-            elit. Facilis, exercitationem.
-        </h1>
-        <div class="account-info__additional">
-            <p>Prime Status : Yes</p>
-            <p>Rank: UnRanked</p>
-        </div>
-        <div class="account-info__details">
-            <a
-                data-fancybox
-                data-src="#details1"
-                href="javascript:;"
-                >Details</a
-            >
-        </div>
-    </div>
-    <div class="account-buysection">
-        <ul>
-            <li class="deliverytime">2 hours</li>
-            <li class="quantity">1</li>
-            <li class="insurance">Free insurance</li>
-        </ul>
-        <div class="account-buysection__buy">
-            <span>$200</span>
-            <button class="buynow">BUY NOW</button>
-        </div>
-    </div>
-</div>
-<div data-aos="fade-up" class="account">
-    <div class="account-screenshot">
-        <div class="redbox"></div>
-    </div>
-    <div class="account-info">
-        <span class="account-info__number">#4</span>
-        <h1 class="account-info__title">
-            Lorem ipsum dolor sit amet consectetur, adipisicing
-            elit. Facilis, exercitationem.
-        </h1>
-        <div class="account-info__additional">
-            <p>Prime Status : Yes</p>
-            <p>Rank: UnRanked</p>
-        </div>
-        <div class="account-info__details">
-            <a
-                data-fancybox
-                data-src="#details1"
-                href="javascript:;"
-                >Details</a
-            >
-        </div>
-    </div>
-    <div class="account-buysection">
-        <ul>
-            <li class="deliverytime">2 hours</li>
-            <li class="quantity">1</li>
-            <li class="insurance">Free insurance</li>
-        </ul>
-        <div class="account-buysection__buy">
-            <span>$200</span>
-            <button class="buynow">BUY NOW</button>
-        </div>
-    </div>
-</div>
-<div data-aos="fade-up" class="account">
-    <div class="account-screenshot">
-        <div class="redbox"></div>
-    </div>
-    <div class="account-info">
-        <span class="account-info__number">#4</span>
-        <h1 class="account-info__title">
-            Lorem ipsum dolor sit amet consectetur, adipisicing
-            elit. Facilis, exercitationem.
-        </h1>
-        <div class="account-info__additional">
-            <p>Prime Status : Yes</p>
-            <p>Rank: UnRanked</p>
-        </div>
-        <div class="account-info__details">
-            <a
-                data-fancybox
-                data-src="#details1"
-                href="javascript:;"
-                >Details</a
-            >
-        </div>
-    </div>
-    <div class="account-buysection">
-        <ul>
-            <li class="deliverytime">2 hours</li>
-            <li class="quantity">1</li>
-            <li class="insurance">Free insurance</li>
-        </ul>
-        <div class="account-buysection__buy">
-            <span>$200</span>
-            <button class="buynow">BUY NOW</button>
-        </div>
-    </div>
-</div> -->
