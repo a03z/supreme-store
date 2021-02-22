@@ -338,11 +338,16 @@
                 <p class="fee">Fee amount: <span>3,08$</span></p>
                 <p class="total">Total amount: <span>103,08$</span></p>
             </div>
-            <div class="order-pay__email">
-                <input type="text" placeholder="email@email.com" />
+            <form class="order-pay__email">
+                <input
+                    id="emailInput"
+                    type="email"
+                    required
+                    placeholder="email@email.com"
+                />
                 <span>We will send details of account to this email</span>
-                <a href="">Pay</a>
-            </div>
+                <input type="submit" id="orderPay" value="Pay" />
+            </form>
         </div>
         <button
             type="button"

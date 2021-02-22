@@ -225,13 +225,13 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .order-pay__email { grid-column: 3; width: 245px; height: 147px; background: #343639; padding: 22px; }
 
-.order-pay__email input { background: #565656; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 4px; outline: none; border: 0; width: 201px; height: 27px; color: white; }
+.order-pay__email #emailInput { padding: 10px; background: #565656; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 4px; outline: none; border: 0; width: 201px; height: 27px; color: white; }
 
-.order-pay__email input::placeholder { color: #dbdbdb; padding: 5px; }
+.order-pay__email #emailInput::placeholder { color: #dbdbdb; }
 
 .order-pay__email span { color: #ff0000; font-size: 9px; line-height: 12px; text-shadow: 0px 0px 4px #ff0000; }
 
-.order-pay__email a { display: flex; flex-direction: column; align-items: center; justify-content: center; background: #eb5757; box-shadow: 0px 0px 7px #eb5757; border-radius: 4px; height: 27px; text-decoration: none; line-height: 117.68%; text-align: center; color: #ffffff; width: 75px; position: relative; top: 30px; left: 120px; }
+.order-pay__email #orderPay { display: flex; flex-direction: column; align-items: center; justify-content: center; background: #eb5757; box-shadow: 0px 0px 7px #eb5757; border-radius: 4px; height: 27px; text-decoration: none; line-height: 117.68%; text-align: center; color: #ffffff; width: 75px; outline: none; border: 0; position: relative; top: 30px; left: 120px; }
 
 .order-active { background: #ce7a2d; }
 
