@@ -446,7 +446,6 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        // filter: drop-shadow(0px 0px 7px #0075ff);
         padding: 15px;
     }
     &-info {
@@ -582,6 +581,9 @@ body {
             text-align: center;
             color: #ffffff;
         }
+    }
+    &-price {
+        display: none;
     }
 }
 
