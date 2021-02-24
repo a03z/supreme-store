@@ -111,6 +111,9 @@ body {
         & a {
             text-decoration: none;
             color: #484848;
+            &:hover {
+                color: #181818;
+            }
         }
     }
     & ul {

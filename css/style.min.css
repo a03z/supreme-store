@@ -33,6 +33,8 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .menu li a { text-decoration: none; color: #484848; }
 
+.menu li a:hover { color: #181818; }
+
 .menu ul { display: flex; }
 
 .contact-info { width: 352px; height: 165px; background: #414141; position: absolute; top: 100px; right: 90px; opacity: 0; transition: all 0.2s ease; font-family: Courier Prime; font-size: 24px; color: #eb5757; }
