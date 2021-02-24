@@ -17,14 +17,15 @@ gmoneyMethod.addEventListener('click', () => {
     cardMethod.classList.remove('order-active')
 })
 
-// !жалкие попытки отсортировать)))
-// let accountList = document.querySelectorAll('.account')
-// let accountListArr = Array.prototype.slice.call(accountList)
-// accountListArr[0].firstElementChild.innerText = parseInt(
-//     accountListArr[0].firstElementChild.innerText
-// )
-// accountListArr = accountListArr.sort((a, b) => {
-//     parseInt(a.firstElementChild.innerText) -
-//         parseInt(b.firstElementChild.innerText)
-//     console.log(parseInt(a.firstElementChild.innerText))
-// })
+var swiper = new Swiper('.swiper-container', {
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: false,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    spaceBetween: 30,
+    loop: true,
+})
