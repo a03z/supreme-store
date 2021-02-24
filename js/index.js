@@ -16,6 +16,7 @@ gmoneyMethod.addEventListener('click', () => {
     btcMethod.classList.remove('order-active')
     cardMethod.classList.remove('order-active')
 })
+
 // !жалкие попытки отсортировать)))
 // let accountList = document.querySelectorAll('.account')
 // let accountListArr = Array.prototype.slice.call(accountList)
