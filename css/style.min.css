@@ -141,6 +141,8 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .account-image img { max-width: 100%; max-height: 100%; }
 
+.account-image__small { grid-column: 1; display: flex; align-items: center; justify-content: center; padding: 15px; display: none; }
+
 .account-info { padding: 25px; margin: auto; }
 
 .account-info h1 { font-family: Open Sans; font-style: normal; font-weight: normal; font-size: 18px; line-height: 25px; color: #9b9b9b; }
@@ -173,7 +175,7 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .account-buy { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 0 40px 0; font-family: Open Sans; font-size: 24px; }
 
-.account-buy a { display: flex; flex-direction: column; align-items: center; justify-content: center; background: #eb5757; box-shadow: 0px 0px 11px 1px #eb5757; border-radius: 5px; width: 60%; height: 56px; text-decoration: none; line-height: 117.68%; text-align: center; color: #ffffff; }
+.account-buy a { display: flex; flex-direction: column; align-items: center; justify-content: center; background: #eb5757; box-shadow: 0px 0px 11px 1px #eb5757; border-radius: 5px; width: 50%; height: 56px; text-decoration: none; line-height: 117.68%; text-align: center; color: #ffffff; font-weight: normal; font-size: 24px; line-height: 117.68%; text-align: center; color: #ffffff; }
 
 .account-price { display: none; }
 
@@ -229,17 +231,17 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .order-pay { grid-row: 2; height: 147px; }
 
-.order-pay__systems { grid-column: 1; padding: 17px 0; display: grid; gap: 8px; grid-template-rows: repeat(3, 34px); width: 245px; height: 147px; background: #343639; }
+.order-pay__systems { grid-column: 1; display: grid; gap: 8px; grid-template-rows: 15px repeat(3, 34px); width: 245px; height: 147px; background: #343639; }
 
-.order-pay__total { grid-column: 2; display: flex; flex-direction: column; align-items: center; width: 245px; height: 147px; background: #343639; }
+.order-pay__total { grid-column: 2; display: flex; flex-direction: column; align-items: center; width: 245px; height: 147px; font-weight: 200; background: #343639; }
 
 .order-pay__total .cost { padding-left: 15px; padding-right: 15px; margin-top: 23px; width: 100%; display: flex; justify-content: space-between; }
 
 .order-pay__total .fee { padding-left: 15px; padding-right: 15px; margin: 0; width: 100%; display: flex; justify-content: space-between; }
 
-.order-pay__total .fee span { color: #eb5757; }
+.order-pay__total .total { background: rgba(26, 26, 26, 0.79); font-size: 18px; line-height: 25px; color: #ffffff; width: 100%; display: flex; justify-content: space-between; height: 34px; margin-bottom: 17px; padding: 5px 13px; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
 
-.order-pay__total .total { background: #565656; font-weight: bold; font-size: 18px; line-height: 25px; color: #ffffff; width: 100%; display: flex; justify-content: space-between; height: 34px; margin-bottom: 17px; padding: 5px 13px; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+.order-pay__total .total span { color: #75eb57; }
 
 .order-pay__email { grid-column: 3; width: 245px; height: 147px; background: #343639; padding: 22px; }
 
@@ -251,29 +253,37 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .order-pay__email #orderPay { display: flex; flex-direction: column; align-items: center; justify-content: center; background: #eb5757; box-shadow: 0px 0px 7px #eb5757; border-radius: 4px; height: 27px; text-decoration: none; line-height: 117.68%; text-align: center; color: #ffffff; width: 75px; outline: none; border: 0; cursor: pointer; position: relative; top: 30px; left: 120px; }
 
-.order-active { background: #ce7a2d; }
+.order-active { background: #ce7a2d; text-shadow: 0px 0px 2px #ffffff; }
 
-.order-active::after { content: ''; display: block; background-image: url(../img/after-arrow.svg); width: 14px; height: 34px; position: relative; left: 230px; top: -34px; }
+.order-active::after { content: ''; display: block; background-image: url(../img/after-arrow.svg); width: 14px; height: 34px; position: relative; left: 145px; }
 
 .order .redbox { background-color: #c4c4c4; width: 300px; height: 200px; }
 
 .order-container { place-items: center; display: grid; max-height: 100%; grid-template-columns: repeat(3, 245px); gap: 0 30px; grid-template-rows: repeat(2, 1fr); z-index: 2; position: relative; }
 
-.method-card { cursor: pointer; display: grid; grid-row: 1; align-items: center; grid-template-columns: 34px 100px; grid-template-rows: 34px; padding-left: 15px; }
-
-.method-btc { cursor: pointer; display: grid; align-items: center; grid-template-columns: 34px 100px; grid-template-rows: 34px; grid-row: 2; padding-left: 15px; }
-
-.method-btc img { width: 28px; height: 28px; opacity: 0.8; }
-
-.method-gmoney { cursor: pointer; display: grid; align-items: center; grid-template-columns: 34px 100px; grid-template-rows: 34px; grid-row: 3; padding-left: 15px; }
-
-.method-text { font-family: Open Sans; font-weight: bold; font-size: 12px; line-height: 16px; color: #ffffff; }
+.method-text { font-family: Open Sans; font-weight: bold; font-size: 12px; line-height: 16px; color: #ffffff; width: 100px; }
 
 .method-image { height: auto; width: 34px; }
 
+.method-title { font-family: Open Sans; font-style: normal; font-weight: 600; font-size: 11px; line-height: 15px; position: relative; top: 5px; grid-row: 1; left: 8px; display: flex; align-items: center; color: #dbdbdb; margin: 0; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+
+.method-card { cursor: pointer; display: flex; align-items: center; text-indent: 15px; }
+
+.method-btc { cursor: pointer; display: flex; align-items: center; text-indent: 15px; }
+
+.method-gmoney { cursor: pointer; display: flex; align-items: center; text-indent: 15px; }
+
+.method-paypal { font-family: Open Sans; font-style: normal; font-weight: bold; font-size: 18px; line-height: 25px; color: #e9e9e9; margin: 0; position: relative; }
+
+.method-paypal .span-1 { color: blue; }
+
+.method-paypal .span-2 { color: #83a5d8; }
+
+.method-paypal a { color: #e9e9e9; text-decoration: underline; }
+
 #order { position: relative; overflow-y: hidden; max-width: 70%; height: 550px; background: #1d1d1d; border-radius: 15px; display: none; }
 
-#order button { background: none; }
+#order button { color: #eb5757; }
 
 .details-image { max-width: 600px; }
 
@@ -293,6 +303,7 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 @media (max-width: 1130px) { .account { display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: 2fr 1fr; grid-template-columns: 1fr; height: auto; width: 55%; }
   .account-info { display: none; }
+  .account-image__small { display: flex; }
   .container { display: flex; flex-direction: column; flex-wrap: wrap; } }
 
 @media (max-width: 900px) { header { grid-template-columns: 1fr 0 1fr; }
