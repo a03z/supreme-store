@@ -16,16 +16,3 @@ gmoneyMethod.addEventListener('click', () => {
     btcMethod.classList.remove('order-active')
     cardMethod.classList.remove('order-active')
 })
-
-var swiper = new Swiper('.swiper-container', {
-    scrollbar: {
-        el: '.swiper-scrollbar',
-        hide: false,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    spaceBetween: 30,
-    loop: true,
-})
