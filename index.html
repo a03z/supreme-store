@@ -19,7 +19,25 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+        <meta property="og:site_name" content="Supreme Store" />
+        <meta
+            property="og:title"
+            content="Want to buy a CS:GO account with medals?"
+        />
+        <meta
+            property="og:image"
+            content="https://cdn.discordapp.com/attachments/488683212348981258/812631132188311592/-removebg-preview.png"
+        />
+        <meta property="og:image_width" content="500" />
+        <meta property="og:image_height" content="500" />
+        <meta
+            property="og:description"
+            content="The best store of CS:GO accounts with medals and other goods."
+        />
+        <meta
+            property="og:type"
+            content="The best store of CS:GO accounts with medals and other goods."
+        />
         <title>Supreme Store</title>
     </head>
     <body id="body">
@@ -160,8 +178,9 @@
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script>
         const appendToDOM = (info, container) => {
-            document.querySelectorAll(`#${container}`)[0].insertAdjacentHTML('beforeend', 
-`
+            document.querySelectorAll(`#${container}`)[0].insertAdjacentHTML(
+                'beforeend',
+                `
 <div
     data-aos="fade-up"
     class="account"
@@ -229,7 +248,8 @@
         >
     </div>
 </div>
-`);
+`
+            )
         }
 
         const initSwiper = () => {
@@ -267,15 +287,15 @@
         })
 
         const getAccounts = () => {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'http://localhost:5050/api/accounts/', false);
-            xhr.send();
-            if(xhr.status != 200) {
-                alert(xhr.status + ': ' + xhr.statusText);
+            var xhr = new XMLHttpRequest()
+            xhr.open('GET', 'http://localhost:5050/api/accounts/', false)
+            xhr.send()
+            if (xhr.status != 200) {
+                alert(xhr.status + ': ' + xhr.statusText)
             } else {
-                const accounts = JSON.parse(xhr.responseText);
-                Object.keys(accounts).forEach(key => {
-                    appendToDOM(accounts[key], "container")
+                const accounts = JSON.parse(xhr.responseText)
+                Object.keys(accounts).forEach((key) => {
+                    appendToDOM(accounts[key], 'container')
                 })
 
                 initSwiper()
