@@ -31,7 +31,7 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .background-zatemnenie__reviews { opacity: 0.5; position: absolute; top: 113px; z-index: 1; }
 
-.background-zatemnenie img { z-index: 1; max-width: 100%; }
+.background-zatemnenie img { z-index: 1; max-height: 100vh; max-width: 100%; }
 
 .background-zatemnenie__faq { opacity: 0.2; position: absolute; overflow: hidden; top: 113px; z-index: 1; height: 980px; }
 
@@ -75,7 +75,7 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .logo h1 { font-family: Open Sans; color: #181818; font-weight: bold; font-size: 36px; line-height: 49px; }
 
-.container { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 5; width: 100vw; }
+.container { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 5; width: 100vw; padding-top: 98px; }
 
 .container h2 { font-size: 64px; font-family: 'Courier Prime', monospace; }
 
