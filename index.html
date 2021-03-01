@@ -288,7 +288,7 @@
 
         const getAccounts = () => {
             var xhr = new XMLHttpRequest()
-            xhr.open('GET', 'http://localhost:5050/api/accounts/', false)
+            xhr.open('GET', 'http://45.67.59.66:5050/api/accounts/', false)
             xhr.send()
             if (xhr.status != 200) {
                 alert(xhr.status + ': ' + xhr.statusText)
