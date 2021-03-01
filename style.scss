@@ -16,6 +16,7 @@ header {
 }
 footer {
     grid-row: 3;
+
     height: 269px;
     background-color: #1c1f22;
     position: relative;
@@ -112,7 +113,7 @@ body {
     position: absolute;
     top: 113px;
     overflow: hidden;
-    z-index: 1;
+    z-index: -1;
     &__reviews {
         opacity: 0.5;
         position: absolute;

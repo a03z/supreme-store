@@ -27,7 +27,7 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .swiper-slide { text-align: center; font-size: 18px; background: rgba(255, 255, 255, 0); /* Center slide text vertically */ display: flex; flex-direction: row; justify-content: center; align-items: center; }
 
-.background-zatemnenie { opacity: 0.2; position: absolute; top: 113px; overflow: hidden; z-index: 1; }
+.background-zatemnenie { opacity: 0.2; position: absolute; top: 113px; overflow: hidden; z-index: -1; }
 
 .background-zatemnenie__reviews { opacity: 0.5; position: absolute; top: 113px; z-index: 1; }
 
@@ -75,7 +75,7 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .logo h1 { font-family: Open Sans; color: #181818; font-weight: bold; font-size: 36px; line-height: 49px; }
 
-.container { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 5; width: 100vw; padding-top: 98px; }
+.container { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 5; width: 100vw; }
 
 .container h2 { font-size: 64px; font-family: 'Courier Prime', monospace; }
 
