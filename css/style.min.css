@@ -27,9 +27,17 @@ body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; m
 
 .swiper-slide { text-align: center; font-size: 18px; background: rgba(255, 255, 255, 0); /* Center slide text vertically */ display: flex; flex-direction: row; justify-content: center; align-items: center; }
 
-main { background-image: url(https://cdn.discordapp.com/attachments/488683212348981258/812383461892816957/ef7cb44d312df5038cba0f69a0901da427900645.jpg); background-size: cover; }
+.main { background-image: url(https://cdn.discordapp.com/attachments/488683212348981258/812383461892816957/ef7cb44d312df5038cba0f69a0901da427900645.jpg); background-size: cover; z-index: 2; pointer-events: none; }
 
-main::before { content: ''; display: block; opacity: 0.2; height: 100%; width: 100%; background-color: black; z-index: 3; position: relative; }
+.main::after { content: ''; display: block; opacity: 0.6; height: 100%; background-color: black; z-index: 3; position: relative; bottom: 100%; }
+
+.main__reviews { background-image: url(https://cdn.discordapp.com/attachments/488683212348981258/812610982761201674/b3378114f1a3bc7e9e8db3dd20962952218443cd.jpg); background-size: cover; }
+
+.main__reviews::after { content: ''; display: block; opacity: 0.6; height: 100%; background-color: black; z-index: 3; position: relative; bottom: 100%; }
+
+.main__faq { background-image: url(https://cdn.discordapp.com/attachments/488683212348981258/812383454582800445/a1b3e0b5ec470ed95e758cfa282207e7.jpg); background-size: cover; }
+
+.main__faq::after { content: ''; display: block; opacity: 0.6; height: 100%; background-color: black; z-index: 3; position: relative; bottom: 100%; }
 
 .background-zatemnenie { opacity: 0.2; position: absolute; top: 113px; overflow: hidden; z-index: -1; }
 
