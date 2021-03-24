@@ -59,7 +59,71 @@
             </nav>
         </header>
         <main class="main">
-            <div class="container" id="container"></div>
+            <div class="container" id="container">
+                <div data-aos="fade-up" class="account">
+                    <div class="swiper-container" id="swiperClick">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="account-image">
+                                    <img
+                                        src="./img/preview.jpg"
+                                        alt="preview Images"
+                                    />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="account-image">
+                                    <img
+                                        src="./img/preview.jpg"
+                                        alt="preview Images"
+                                    />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="account-image">
+                                    <img
+                                        src="./img/preview.jpg"
+                                        alt="preview Images"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="account-image__small">
+                        <img src="./img/preview.jpg" alt="preview Images" />
+                    </div>
+                    <div class="account-info">
+                        <h1>
+                            <span>⭐</span> Old Operations
+                            <span>⭐</span> Bravo, Breakout Silver, 2018 Service
+                            Medal, 10 and 5 Year Coins + LB <span>⭐</span> 256
+                            wins <span>⭐</span> Old Steam Badges
+                            <span>⭐</span>
+                        </h1>
+                        <div class="account-info__advantages">
+                            <li id="lvl">Steam lvl: 23</li>
+                            <li id="games">Games: 234</li>
+                            <li id="wins">Wins: 152</li>
+                            <li id="prime">Prime Status</li>
+                            <li id="insurance">Free Insurance</li>
+                            <li id="delivery">Instant Delivery</li>
+                        </div>
+                    </div>
+                    <div class="account-buy">
+                        <a
+                            style="margin-bottom: 35px"
+                            data-fancybox
+                            data-src="#order"
+                            href="javascript:;"
+                            data-touch="false"
+                            >Buy for $25</a
+                        >
+                        <a target="_blank" href="${info.link}">Account Link</a>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer
             data-aos="zoom-in"
@@ -170,81 +234,6 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script>
-        const appendToDOM = (info, container) => {
-            document.querySelectorAll(`#${container}`)[0].insertAdjacentHTML(
-                'beforeend',
-                `
-<div
-    data-aos="fade-up"
-    class="account"
->
-    <div class="account-price">${info.price}</div>
-    <div class="swiper-container" id="swiperClick">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="account-image">
-                    <img
-                        src="./img/preview.jpg"
-                        alt="preview Images"
-                    />
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="account-image">
-                    <img
-                        src="./img/preview.jpg"
-                        alt="preview Images"
-                    />
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="account-image">
-                    <img
-                        src="./img/preview.jpg"
-                        alt="preview Images"
-                    />
-                </div>
-            </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
-    <div class="account-image__small">
-        <img src="./img/preview.jpg" alt="preview Images" />
-    </div>
-    <div class="account-info">
-        <h1>
-            ${info.description}
-        </h1>
-        <div class="account-info__advantages">
-            <li id="lvl">Steam lvl: ${info.steamLevel}</li>
-            <li id="games">Games: ${info.games}</li>
-            <li id="wins">Wins: ${info.wins}</li>
-            <li id="prime">Prime Status</li>
-            <li id="insurance">Free Insurance</li>
-            <li id="delivery">Instant Delivery</li>
-        </div>
-    </div>
-    <div class="account-buy">
-        <a
-            style="margin-bottom: 35px"
-            data-fancybox
-            data-src="#order"
-            href="javascript:;"
-            data-touch="false"
-            >Buy for $${info.price}</a
-        >
-        <a
-            target="_blank"
-            href="${info.link}"
-            >Account Link</a
-        >
-    </div>
-</div>
-`
-            )
-        }
-
         const initSwiper = () => {
             var swiper = new Swiper('.swiper-container', {
                 scrollbar: {
@@ -278,23 +267,6 @@
             mirror: false,
             anchorPlacement: 'top-bottom',
         })
-
-        const getAccounts = () => {
-            var xhr = new XMLHttpRequest()
-            xhr.open('GET', 'https://gogabok.ru/api/accounts/', false)
-            xhr.send()
-            if (xhr.status != 200) {
-                alert(xhr.status + ': ' + xhr.statusText)
-            } else {
-                const accounts = JSON.parse(xhr.responseText)
-                Object.keys(accounts).forEach((key) => {
-                    appendToDOM(accounts[key], 'container')
-                })
-
-                initSwiper()
-            }
-        }
-
-        getAccounts()
+        initSwiper()
     </script>
 </html>
