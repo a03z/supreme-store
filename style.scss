@@ -16,7 +16,7 @@ header {
 }
 footer {
     grid-row: 3;
-
+    z-index: 2;
     height: 269px;
     background-color: #1c1f22;
     position: relative;
@@ -62,13 +62,10 @@ body {
     min-height: 100vh;
     color: white;
     background-color: black;
-
     font-family: Open Sans;
-    font-style: normal;
     font-weight: bold;
     font-size: 14px;
     line-height: 19px;
-    color: #ffffff;
 }
 .swiper-container {
     width: 100%;

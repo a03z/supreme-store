@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
 header { height: 113px; background-color: #ffffff; display: grid; grid-template-columns: 500px 1fr 400px; user-select: none; color: black; grid-row: 1; }
 
-footer { grid-row: 3; height: 269px; background-color: #1c1f22; position: relative; display: flex; justify-content: center; align-items: center; gap: 150px; }
+footer { grid-row: 3; z-index: 2; height: 269px; background-color: #1c1f22; position: relative; display: flex; justify-content: center; align-items: center; gap: 150px; }
 
 footer h2 { margin: 0; font-family: Open Sans; font-weight: 800; font-size: 48px; line-height: 65px; color: #ffffff; }
 
@@ -17,7 +17,7 @@ li { list-style: none; }
 
 html { width: 100vw; }
 
-body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; min-height: 100vh; color: white; background-color: black; font-family: Open Sans; font-style: normal; font-weight: bold; font-size: 14px; line-height: 19px; color: #ffffff; }
+body { display: grid; grid-template-rows: 113px 1fr 100px; overflow-x: hidden; min-height: 100vh; color: white; background-color: black; font-family: Open Sans; font-weight: bold; font-size: 14px; line-height: 19px; }
 
 .swiper-container { width: 100%; height: 100%; grid-column: 1; grid-row: 1; opacity: 0.65; transition: opacity 0.3s ease; }
 
